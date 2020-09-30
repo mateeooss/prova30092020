@@ -1,0 +1,14 @@
+package adsis4sem2020;
+
+public class App {
+	public static void main(String[] args) {
+		Cliente arthur = new Cliente(1,"arthur","1119734823");
+		Veterinario matheus = new Veterinario("matheus", 122334322);
+		Pet rex= new Pet("rex",arthur);
+        
+		Consulta num12 = new Consulta("banho e tosa", rex, matheus);
+		
+
+	}
+
+}
