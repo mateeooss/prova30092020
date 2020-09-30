@@ -1,0 +1,27 @@
+package adsis4sem2020;
+
+import java.util.ArrayList;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.ManyToMany;
+import javax.persistence.ManyToOne;
+
+public class Pet {
+   private String nome;
+   @ManyToOne
+   private ArrayList<Cliente> dono;
+
+   
+   public Pet(String nome){
+	   this.nome=nome;
+   }
+   
+   public Pet(String nome, Cliente dono) {
+	   this.nome=nome;
+	   this.dono.add(dono);
+   }
+   
+
+   
+
+}
