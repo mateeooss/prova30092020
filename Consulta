@@ -1,0 +1,25 @@
+package adsis4sem2020;
+import java.util.ArrayList;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.ManyToMany;
+import javax.persistence.ManyToOne;
+public class Consulta {
+    private String procedimento;
+    @ManyToMany
+    private ArrayList<Veterinario> veterinarios;
+    private Pet animal;
+    
+    
+    public Consulta(String procedimento, Pet animal, Veterinario veterinario) {
+    	this.animal=animal;
+    	this.procedimento=procedimento;
+    	this.veterinarios.add(veterinario);
+    }
+    public Consulta(String procedimento, Pet animal, ArrayList<Veterinario> veterinarios) {
+    	this.animal=animal;
+    	this.procedimento=procedimento;
+    	this.veterinarios.addAll(veterinarios);
+    }
+    
+}
